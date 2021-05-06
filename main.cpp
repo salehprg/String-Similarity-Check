@@ -239,7 +239,7 @@ int main()
 
     vector<vector<int>> matrix(userDomain.size() + 1);
 
-    int similarity = INT_MAX;
+    int similarity = INT8_MAX;
 
     vector<vector<int>> toPrintMatrix;
     string topSiteName ;
