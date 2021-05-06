@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <Windows.h>
+//#include <Windows.h>
 
 using namespace std;
 
@@ -143,14 +143,14 @@ string getMainDomain (string domainName)
     return result;
 }
 
-string GetCurrentDirectory()
-{
-	char buffer[MAX_PATH];
-	GetModuleFileNameA(NULL, buffer, MAX_PATH);
-	string::size_type pos = string(buffer).find_last_of("\\/");
+// string GetCurrentDirectory()
+// {
+// 	char buffer[MAX_PATH];
+// 	GetModuleFileNameA(NULL, buffer, MAX_PATH);
+// 	string::size_type pos = string(buffer).find_last_of("\\/");
 	
-	return string(buffer).substr(0, pos);
-}
+// 	return string(buffer).substr(0, pos);
+// }
 
 int main()
 {
@@ -197,7 +197,8 @@ int main()
         ifstream f(fileName.c_str());
         if(!f.good())
         {
-            cout << "Please put 'top_500_domains.txt' in \n --- " << GetCurrentDirectory() << " --- \n";
+            cout << "Please put 'top_500_domains.txt' next to the executable file \n";
+            //cout << "Please put 'top_500_domains.txt' in \n --- " << GetCurrentDirectory() << " --- \n";
 
             cout << "Can't read file" << '\n';
                 return 0;
